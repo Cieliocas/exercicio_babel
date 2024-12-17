@@ -14,11 +14,20 @@ const alunosAprovados = notasDosAlunos.filter(aluno => aluno.nota >= 6);
 // Alunos que reprovaram
 const alunosReprovados = notasDosAlunos.filter(aluno => aluno.nota < 6);
 
+// Filtrar alunos que vão para repescagem
+const alunosRepescagem = notasDosAlunos.filter(aluno => aluno.nota >= 4 && aluno.nota < 6);
+
 // Exibir alunos que foram aprovados em uma variavel com frase formatada
 const aprovados = alunosAprovados.map(aluno => `${aluno.nome} foi aprovado com nota ${aluno.nota}`);
 
 // Exibir alunos que foram reprovados em uma variavel com frase formatada
 const reprovados = alunosReprovados.map(aluno => `${aluno.nome} foi reprovado com nota ${aluno.nota}`);
+
+// Exibir alunos que vão para repescagem em uma variavel com frase formatada
+const repescagem = alunosRepescagem.map(aluno => `${aluno.nome} vai para repescagem com nota ${aluno.nota}`);
+
+// Exibir quanto o aluno precisa tirar na repescagem para ser aprovado
+
 
 // printar alunos aprovados
 console.log(aprovados);
@@ -26,5 +35,20 @@ console.log(aprovados);
 // printar alunos reprovados
 console.log(reprovados);
 
-// Exemplo de saida
-// [ 'Gian foi aprovado com nota 9', 'Cielio foi aprovado com nota 7', 'Helena foi aprovado com nota 10', 'Priscila foi aprovado com nota 6' ]
+// função para printar alunos que vão para repescagem e quanto precisa tirar para ser aprovado.
+console.log(repescagem);
+
+alunosRepescagem.map(aluno => {
+    const notaQueFalta = 6 - aluno.nota;
+    console.log(`${aluno.nome} precisa tirar ${notaQueFalta} na repescagem`);
+});
+
+// Exemplo de saida esperada
+
+// Gian foi aprovado com nota 9
+
+// Pedro foi reprovado com nota 4
+
+// Lucas vai para repescagem com nota 5
+
+// Joana precisa tirar 1 na repescagem
