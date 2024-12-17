@@ -1,5 +1,9 @@
 "use strict";
 
+// Este arquivo contém um array de objetos com nome e nota de alunos.
+
+// Trabalho relacionado a manipulação de arrays de objetos utilizando recursos de programação funcional do ES6.
+
 var notasDosAlunos = [
 // Array de objetos
 {
