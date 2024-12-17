@@ -55,8 +55,6 @@ var repescagem = alunosRepescagem.map(function (aluno) {
   return "".concat(aluno.nome, " vai para repescagem com nota ").concat(aluno.nota);
 });
 
-// Exibir quanto o aluno precisa tirar na repescagem para ser aprovado
-
 // printar alunos aprovados
 console.log(aprovados);
 
@@ -65,6 +63,8 @@ console.log(reprovados);
 
 // função para printar alunos que vão para repescagem e quanto precisa tirar para ser aprovado.
 console.log(repescagem);
+
+// Exibir quanto o aluno precisa tirar na repescagem para ser aprovado
 alunosRepescagem.map(function (aluno) {
   var notaQueFalta = 6 - aluno.nota;
   console.log("".concat(aluno.nome, " precisa tirar ").concat(notaQueFalta, " na repescagem"));

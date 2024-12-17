@@ -26,9 +26,6 @@ const reprovados = alunosReprovados.map(aluno => `${aluno.nome} foi reprovado co
 // Exibir alunos que vão para repescagem em uma variavel com frase formatada
 const repescagem = alunosRepescagem.map(aluno => `${aluno.nome} vai para repescagem com nota ${aluno.nota}`);
 
-// Exibir quanto o aluno precisa tirar na repescagem para ser aprovado
-
-
 // printar alunos aprovados
 console.log(aprovados);
 
@@ -38,6 +35,7 @@ console.log(reprovados);
 // função para printar alunos que vão para repescagem e quanto precisa tirar para ser aprovado.
 console.log(repescagem);
 
+// Exibir quanto o aluno precisa tirar na repescagem para ser aprovado
 alunosRepescagem.map(aluno => {
     const notaQueFalta = 6 - aluno.nota;
     console.log(`${aluno.nome} precisa tirar ${notaQueFalta} na repescagem`);
